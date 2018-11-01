@@ -5,6 +5,11 @@ import ij.process.ImageProcessor;
 
 import java.awt.image.ImageProducer;
 
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+
 public class Main {
 
 
@@ -44,9 +49,9 @@ public class Main {
         detector.setHighThreshold(1f);
 
 ////apply it to an image
-//        detector.setSourceImage(imageC);
-//        detector.process();
-//        BufferedImage edges = detector.getEdgesImage();
+       detector.setSourceImage((BufferedImage )imageC);
+        detector.process();
+        BufferedImage edges = detector.getEdgesImage();
 
 
 
